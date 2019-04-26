@@ -1,0 +1,321 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1113026033278124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4058793107515216}
+  - component: {fileID: 33315912357129260}
+  - component: {fileID: 65775016650015592}
+  - component: {fileID: 23808275632116870}
+  - component: {fileID: 114568331256277052}
+  - component: {fileID: 114065833561122686}
+  m_Layer: 0
+  m_Name: "8\uFF1ANested Graph Cube"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4058793107515216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33315912357129260
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65775016650015592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &23808275632116870
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114568331256277052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5c3ebb24c97464da319951cafe5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.91,"type":"FlowCanvas.FlowScript","translation":{"x":140.0,"y":97.0},"zoomFactor":0.5000004,"nodes":[{"_position":{"x":30.0,"y":210.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"_nestedBT":{"_value":1},"_inputPortValues":{"NestedGraphOwner":{"$content":2,"$type":"UnityEngine.Transform"}},"_position":{"x":285.0,"y":180.0},"_name":"Behavior
+    Tree","$type":"FlowCanvas.Nodes.NestedBTNode","$id":"3"},{"_nestedFSM":{"_value":3},"_inputPortValues":{"NestedGraphOwner":{"$content":2,"$type":"UnityEngine.Transform"}},"_position":{"x":690.0,"y":180.0},"_name":"FSM","$type":"FlowCanvas.Nodes.NestedFSMNode","$id":"6"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"Start","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"Start","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"\u7ed1\u5b9aNest
+    Graph \u5728 GameObject\u4fdd\u5b58\u6210Prefab\u65f6\uff0c\u9700\u8981\u70b9\u51fb\u4e24\u6b21
+    Inspector Prefab\u7684 Apply\u6309\u94ae","rect":{"xMin":-69.0,"yMin":84.0,"xMax":1023.425,"yMax":460.5143}},{"name":"NestGraph\u5728\u8ddf\u968fGameobject\u4fdd\u5b58\u6210Prefab\u540e\uff0c
+    \u8d44\u6e90\u4fdd\u5b58\u5728Prefab Asset\u7684\u5b50\u7269\u4f53\u5c42\u7ea7\u4e2d","rect":{"xMin":-53.27197,"yMin":482.7197,"xMax":1017.977,"yMax":671.6374}},{"name":"\u9009\u62e9
+    prefab Asset\uff08\u975ehierachy\u4e2d\u7684prefab\uff09\uff0c\u4f7f\u7528\u83dc\u5355\u680f\u7684  Editor-Save
+    To Asset \u529f\u80fd\uff0c\u5c06\u6240\u6709\u5d4c\u5957NestGraph\u8d44\u6e90\u4fdd\u5b58\u5230\u4e00\u4e2a\u65b0\u7684Asset\u4e2d","rect":{"xMin":-63.45892,"yMin":768.2011,"xMax":1040.541,"yMax":979.8222}},{"name":"\u9009\u62e9
+    prefab Asset\uff08\u975ehierachy\u4e2d\u7684prefab\uff09\u6216 Graph asset\uff0c\u83dc\u5355\u680f\u53f3\u4fa7\u51fa\u73b0ClearUselessNestedAsset,\u70b9\u51fb\u540e\u53ef\u6e05\u9664\u5e9f\u5f03\uff0c\u6ca1\u6709\u88ab\u5f15\u7528\u7684\u5d4c\u5957\u8d44\u6e90","rect":{"xMin":-68.37964,"yMin":1034.92,"xMax":959.5938,"yMax":1270.914}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 114912904340903662}
+  - {fileID: 4058793107515216}
+  - {fileID: 114342339104286578}
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 114065833561122686}
+--- !u!114 &114065833561122686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113026033278124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{}}'
+  _objectReferences: []
+--- !u!114 &114216372476359464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
+  m_Name: BehaviourTree
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-100.0,"y":-23.0},"nodes":[{"_position":{"x":311.0,"y":309.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"2"},{"_action":{"waitTime":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":166.0,"y":411.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"log":{"_value":"sub
+    bt in fsm: hello!"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"},"_position":{"x":469.0,"y":421.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"eventName":{"_value":"end
+    BT State"},"delay":{},"$type":"NodeCanvas.Tasks.Actions.SendEvent"},"_position":{"x":834.0,"y":417.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+  repeat: 1
+  updateInterval: 0
+--- !u!114 &114266288742439610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"FlowCanvas.FlowScript","nodes":[{"_position":{"x":300.0},"$type":"FlowCanvas.Nodes.ConstructionEvent"},{"_position":{"x":300.0,"y":200.0},"$type":"FlowCanvas.Nodes.EnableEvent","$id":"3"},{"_inputPortValues":{"value":{"$content":"sub
+    flowscript in fsm : hello","$type":"System.String"}},"_position":{"x":490.0,"y":201.0},"$type":"FlowCanvas.Nodes.G_LogOnScreen","$id":"4"},{"_inputPortValues":{},"_position":{"x":700.0,"y":200.0},"$type":"FlowCanvas.Nodes.Finish","$id":"6"},{"updateInterval":{},"_position":{"x":300.0,"y":400.0},"$type":"FlowCanvas.Nodes.UpdateEvent"},{"_position":{"x":300.0,"y":600.0},"$type":"FlowCanvas.Nodes.DisableEvent"}],"connections":[{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+--- !u!114 &114304394538480842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: "8\uFF1ANested Graph Cube FlowScript"
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"FlowCanvas.FlowScript","translation":{"x":-23.94276,"y":-22.94814},"zoomFactor":0.5000001,"nodes":[{"_position":{"x":31.0,"y":216.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"_nestedBT":{"_value":1},"_inputPortValues":{"NestedGraphOwner":{"$content":2,"$type":"UnityEngine.Transform"}},"_position":{"x":278.0,"y":184.0},"_name":"Behavior
+    Tree","$type":"FlowCanvas.Nodes.NestedBTNode","$id":"3"},{"_nestedFSM":{"_value":3},"_inputPortValues":{"NestedGraphOwner":{"$content":2,"$type":"UnityEngine.Transform"}},"_position":{"x":688.0,"y":185.0},"_name":"FSM","$type":"FlowCanvas.Nodes.NestedFSMNode","$id":"6"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"Start","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"Start","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"\u7ed1\u5b9aNest
+    Graph \u5728 GameObject\u4fdd\u5b58\u6210Prefab\u65f6\uff0c\u9700\u8981\u70b9\u51fb\u4e24\u6b21
+    Inspector Prefab\u7684 Apply\u6309\u94ae","rect":{"xMin":-69.0,"yMin":84.0,"xMax":1023.425,"yMax":460.5143}},{"name":"NestGraph\u5728\u8ddf\u968fGameobject\u4fdd\u5b58\u6210Prefab\u540e\uff0c
+    \u8d44\u6e90\u4fdd\u5b58\u5728Prefab Asset\u7684\u5b50\u7269\u4f53\u5c42\u7ea7\u4e2d","rect":{"xMin":-53.27197,"yMin":482.7197,"xMax":1017.977,"yMax":671.6374}},{"name":"\u9009\u62e9
+    prefab Asset\uff08\u975ehierachy\u4e2d\u7684prefab\uff09\uff0c\u4f7f\u7528\u83dc\u5355\u680f\u7684  Editor-Save
+    To Asset \u529f\u80fd\uff0c\u5c06\u6240\u6709\u5d4c\u5957NestGraph\u8d44\u6e90\u4fdd\u5b58\u5230\u4e00\u4e2a\u65b0\u7684Asset\u4e2d","rect":{"xMin":-63.45892,"yMin":768.2011,"xMax":1040.541,"yMax":979.8222}},{"name":"\u9009\u62e9
+    prefab Asset\uff08\u975ehierachy\u4e2d\u7684prefab\uff09\u6216 Graph asset\uff0c\u83dc\u5355\u680f\u53f3\u4fa7\u51fa\u73b0ClearUselessNestedAsset,\u70b9\u51fb\u540e\u53ef\u6e05\u9664\u5e9f\u5f03\uff0c\u6ca1\u6709\u88ab\u5f15\u7528\u7684\u5d4c\u5957\u8d44\u6e90","rect":{"xMin":-68.37964,"yMin":1034.92,"xMax":959.5938,"yMax":1270.914}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 114912904340903662}
+  - {fileID: 4058793107515216}
+  - {fileID: 114342339104286578}
+  _deserializationFailed: 0
+--- !u!114 &114342339104286578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: FSM
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.StateMachines.FSM","translation":{"x":199.0,"y":-89.0},"zoomFactor":0.7500088,"nodes":[{"_actionList":{"executionMode":"ActionsRunInParallel","actions":[]},"_position":{"x":420.0,"y":269.0},"_name":"start_State","$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"NestedGraphOwner":{},"_flowScript":{"_value":1},"_position":{"x":690.0,"y":433.0},"_name":"Log","$type":"NodeCanvas.StateMachines.FlowScriptState","$id":"5"},{"NestedGraphOwner":{},"_nestedFSM":{"_value":2},"successEvent":"","_position":{"x":478.0,"y":617.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"8"},{"NestedGraphOwner":{},"_nestedBT":{"_value":3},"successEvent":"end
+    BT State","_position":{"x":206.0,"y":470.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"11"}],"connections":[{"_condition":{"timeout":{"_value":1.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 114266288742439610}
+  - {fileID: 114353320883111484}
+  - {fileID: 114216372476359464}
+  _deserializationFailed: 0
+--- !u!114 &114353320883111484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: FSM
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.StateMachines.FSM","translation":{"x":-141.0,"y":-57.0},"nodes":[{"_actionList":{"executionMode":"ActionsRunInParallel","actions":[]},"_position":{"x":343.0,"y":325.0},"_name":"sub
+    start state","$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":"ActionsRunInParallel","actions":[{"log":{"_value":"sub
+    fsm in fsm: hello FSM"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"},{"$type":"NodeCanvas.Tasks.Actions.ForceFinishGraph"}]},"_position":{"x":623.0,"y":428.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"5"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+--- !u!114 &114376813125080992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
+  m_Name: SUBTREE
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":535.0,"y":240.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_action":{"waitTime":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":376.0,"y":344.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"log":{"_value":"sub
+    bt in BT : hello!"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"},"_position":{"x":744.0,"y":344.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+  repeat: 1
+  updateInterval: 0
+--- !u!114 &114497069733724970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: FSM
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.StateMachines.FSM","translation":{"x":67.99998,"y":13.0},"zoomFactor":0.7500099,"nodes":[{"_actionList":{"executionMode":"ActionsRunInParallel","actions":[]},"_position":{"x":415.0,"y":286.0},"_name":"sub
+    fsm start state","$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":"ActionsRunInParallel","actions":[{"log":{"_value":"sub
+    FSM in BT : hello!"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":608.0,"y":435.0},"_name":"log
+    ","$type":"NodeCanvas.StateMachines.ActionState","$id":"5"}],"connections":[{"_condition":{"timeout":{"_value":1.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+--- !u!114 &114675358603751572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"FlowCanvas.FlowScript","nodes":[{"_position":{"x":300.0},"$type":"FlowCanvas.Nodes.ConstructionEvent"},{"_position":{"x":300.0,"y":200.0},"$type":"FlowCanvas.Nodes.EnableEvent","$id":"3"},{"_inputPortValues":{"value":{"$content":"sub
+    flowscript In BT : hello","$type":"System.String"}},"_position":{"x":514.0,"y":198.0},"$type":"FlowCanvas.Nodes.G_LogOnScreen","$id":"4"},{"_inputPortValues":{},"_position":{"x":700.0,"y":200.0},"$type":"FlowCanvas.Nodes.Finish","$id":"6"},{"updateInterval":{},"_position":{"x":300.0,"y":400.0},"$type":"FlowCanvas.Nodes.UpdateEvent"},{"_position":{"x":300.0,"y":600.0},"$type":"FlowCanvas.Nodes.DisableEvent"}],"connections":[{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+--- !u!114 &114912904340903662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
+  m_Name: Behavior Tree
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.91,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-30.0,"y":59.0},"zoomFactor":0.7500097,"nodes":[{"_position":{"x":376.0,"y":176.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_action":{"waitTime":{"_value":1.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},"_position":{"x":107.0,"y":286.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.DebugBeep"},"_position":{"x":346.0,"y":294.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"NestedGraphOwner":{},"_subTree":{"_value":1},"_position":{"x":650.0,"y":314.0},"_name":"SUBTREE","$type":"NodeCanvas.BehaviourTrees.SubTree","$id":"8"},{"NestedGraphOwner":{},"_nestedFSM":{"_value":2},"successState":"log
+    ","failureState":"","_position":{"x":874.0,"y":311.0},"_name":"FSM","$type":"NodeCanvas.BehaviourTrees.NestedFSM","$id":"11"},{"NestedGraphOwner":{},"_flowScript":{"_value":3},"_position":{"x":1093.0,"y":318.0},"_name":"log
+    somethine","$type":"NodeCanvas.BehaviourTrees.BTNestedFlowScript","$id":"14"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"14"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 114376813125080992}
+  - {fileID: 114497069733724970}
+  - {fileID: 114675358603751572}
+  _deserializationFailed: 0
+  repeat: 1
+  updateInterval: 0
