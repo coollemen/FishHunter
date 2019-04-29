@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
+    public int speed;
+    public float birthTimeSpan = 1f;
+    
     public int maxSpeed;
 
     public int maxCount;
@@ -16,6 +19,6 @@ public class Fish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.right*speed*Time.deltaTime);
     }
 }
