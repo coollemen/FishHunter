@@ -36,11 +36,32 @@ public class FishManager : MonoSingleton<FishManager>
         var def = fishDefs[fishIndex];
         int num = Random.Range((def.maxNum/2)+1, def.maxNum);
         int speed = Random.Range(def.maxSpeed / 2, def.maxSpeed);
-        StartCoroutine(CreateFish(def.url, fishCreatePositions[posIndex],  num,speed,def.spawnTimeSpan));
+        float angleOffset = Random.Range(-22, 22);
+        int type = Random.Range(0, 2);
+        if (type == 0)
+        {
+            StartCoroutine(CreateStraightFish(def.url, fishCreatePositions[posIndex],  num,speed,angleOffset,def.spawnTimeSpan));
+        }
+        else
+        {
+            float rotateAngle;
+            if (Random.Range(0, 2) == 0)
+            {
+                rotateAngle = Random.Range(-15, -9);
+            }
+            else
+            {
+                rotateAngle = Random.Range(9, 15);
+            }
+
+            
+            StartCoroutine(CreateTurnFish(def.url, fishCreatePositions[posIndex],  num,speed,rotateAngle,def.spawnTimeSpan));
+        }
+
         
     }
 
-    IEnumerator CreateFish(string url,Transform pos,int count,int speed,float timespan)
+    IEnumerator CreateStraightFish(string url,Transform pos,int count,int speed,float angleOffset,float timespan)
     {
         
         for (int i = 0; i < count; i++)
@@ -49,8 +70,26 @@ public class FishManager : MonoSingleton<FishManager>
             go.GetComponent<Fish>().speed = speed;
             go.transform.position = pos.position;
             go.transform.localRotation = pos.localRotation;
+            go.transform.Rotate(Vector3.forward,angleOffset);
             yield return new WaitForSeconds(timespan);
                 
+        }
+
+        
+    }
+    IEnumerator CreateTurnFish(string url,Transform pos,int count,int speed,float rotateAngle,float timespan)
+    {
+        
+        for (int i = 0; i < count; i++)
+        {
+            GameObject go = PoolManager.Instance.Spawn(url);
+            var fish = go.GetComponent<Fish>();
+            fish.speed = speed;
+            fish.transform.position = pos.position;
+            fish.isRotate = true;
+            fish.rotateAngle = rotateAngle;
+            fish.rotateSpeed = 2;
+            yield return new WaitForSeconds(timespan);               
         }
 
         
